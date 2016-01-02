@@ -1,0 +1,96 @@
+// bower:scss
+// endbower
+
+@import "bower_components/normalize-css/normalize";
+@import '../fonts/montserrat/stylesheet';
+
+$lineHeigth: 130%;
+
+$BTNcolor: #3B5998;
+$BTNcolorTxt: #a8b9dd;
+
+body {
+  background: #fafafa;
+  font-family: 'montserratregular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: $lineHeigth;
+  margin: 0;
+}
+
+a {
+  color: $BTNcolor;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($BTNcolor, 20%);
+  }
+}
+
+a.external {
+
+  &::before {
+    content: '→';
+    padding-right: 0.5em;
+  }
+}
+
+h1, h2, h3 {
+  color: $BTNcolor;
+  font-family: 'montserratextra_bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: $lineHeigth;
+  margin-bottom: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.info {
+  font-size: 0.8em;
+}
+
+#pagecontainer {
+  width: 450px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 450px) {
+    width: 100% - (2 * 8%);
+    margin: 0;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  padding: 0;
+  text-align: center;
+}
+
+.generate {
+  padding: 0.7em 3.2em;
+  color: $BTNcolorTxt;
+  display: inline-block;
+  background: $BTNcolor;
+  border-bottom: 0.2em solid darken($BTNcolor, 50%);
+
+  &:hover {
+    color: lighten($BTNcolorTxt, 20%);
+    background: darken($BTNcolor, 20%);
+  }
+}
+
+#output {
+  $fontSize: 0.9em;
+  font-size: $fontSize;
+  line-height: $lineHeigth;
+  width: 100%;
+  height: $fontSize * 28 * ($lineHeigth/100%);
+  background-color: white;
+  padding: 3px;
+}
