@@ -81,7 +81,7 @@ finalWord = list(set(finalWord))
 
 print('Number of nouns in file: ' + str(len(finalWord)))
 
-with open('./output/xkcd_de.json', 'w') as outfile:
+with open('./web/app/public/xkcd_de.json', 'w') as outfile:
     json.dump({'words': finalWord}, outfile, indent=4)
 
 # print(finalWord)
